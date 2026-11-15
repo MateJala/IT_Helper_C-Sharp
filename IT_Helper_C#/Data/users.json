@@ -1,0 +1,20 @@
+[
+  {
+    "Id": 4,
+    "Username": "kira",
+    "Password": "kirakira",
+    "Role": 1,
+    "CreatedAt": "11/8/2026 7:53:06 PM",
+    "Progress": 100,
+    "CompleteLevelIds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  }
+]

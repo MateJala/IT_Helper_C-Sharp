@@ -1,0 +1,311 @@
+[
+  {
+    "Id": 1,
+    "Name": "The Forgotten Password",
+    "Type": "Dialogue",
+    "Character": "Nika",
+    "Description": "Your first day at the IT Helpdesk! A customer named Nika cannot sign in to his email. Talk to him and guide him to a solution. Pick an answer with the Arrow Keys and confirm with Enter. A good IT helper listens first, stays calm and never panics!",
+    "Dialogue": [
+      {
+        "Npc": "Hello?! Finally, a human! My email won't let me sign in. It says my password is wrong. Am I hacked?! Please tell me I'm not hacked!",
+        "Options": [
+          {
+            "Text": "Yes, you are 100% hacked. Unplug your computer immediately.",
+            "Reply": "WHAT?! Unplug it?! It's a laptop, it doesn't even have a cable! Please help me properly!",
+            "Correct": false
+          },
+          {
+            "Text": "Let's not panic. First, check if Caps Lock is turned on.",
+            "Reply": "Caps Lock... OH! It was on! Good catch. But... it still says wrong password. What now?",
+            "Correct": true
+          },
+          {
+            "Text": "Just make a new email account, it's faster.",
+            "Reply": "All my work contacts are in that email! I can't just abandon it. Give me real advice please!",
+            "Correct": false
+          }
+        ]
+      },
+      {
+        "Npc": "So Caps Lock was on, but the password still fails. I already tried it three times!",
+        "Options": [
+          {
+            "Text": "No problem. Use the 'Forgot password' button and reset it via your phone or recovery email.",
+            "Reply": "Forgot password... found it! Okay, I got a reset message. Should I open it?",
+            "Correct": true
+          },
+          {
+            "Text": "Type it ten more times, but faster. Sometimes that helps.",
+            "Reply": "...I tried. It really, really does not help. Do you actually know what you are doing?",
+            "Correct": false
+          },
+          {
+            "Text": "Are your fingers even on the right keys?",
+            "Reply": "Very funny. I came here for help, not for comedy. Let's try this seriously.",
+            "Correct": false
+          }
+        ]
+      },
+      {
+        "Npc": "The reset page is open and it asks me to pick a new password. Any advice?",
+        "Options": [
+          {
+            "Text": "Use 'password123', it's easy to remember.",
+            "Reply": "My nephew says that is literally the first thing hackers try. Give me real advice!",
+            "Correct": false
+          },
+          {
+            "Text": "Write it on a sticky note and put it on your monitor so you never forget.",
+            "Reply": "My whole office walks past my monitor every day... that sounds like a terrible idea!",
+            "Correct": false
+          },
+          {
+            "Text": "Pick a long passphrase only you know, and never share it with anyone.",
+            "Reply": "Done! Something long and memorable... IT WORKED! I'm in! Thank you, you saved my whole week!",
+            "Correct": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "The Missing Semicolon",
+    "Type": "Code",
+    "Description": "A junior developer left a syntax error in the helpdesk program and now it refuses to compile. Read the C# code carefully, move the cursor onto the line with the mistake and press Enter to flag it. Tip: the C# compiler is very picky about punctuation!",
+    "Code": [
+      "static void Main()",
+      "{",
+      "    string welcome = \"Welcome to the helpdesk\"",
+      "    int tickets = 0;",
+      "",
+      "    Console.WriteLine(welcome);",
+      "    Console.WriteLine(\"Open tickets: \" + tickets);",
+      "}"
+    ],
+    "BuggyLine": 2,
+    "Fix": "Every C# statement must end with a semicolon. The line should be: string welcome = \"Welcome to the helpdesk\";"
+  },
+  {
+    "Id": 3,
+    "Name": "Cable Chaos",
+    "Type": "Movement",
+    "Description": "Welcome to the server room! Some network cables are broken and show up as red #. Move with the Arrow Keys and press F while standing on a broken cable to fix it. Fix every cable to complete the level. Watch out for the server racks (X), you cannot walk through them!",
+    "Grid": [
+      "XXXXXXXXXXXXXXXXXXX",
+      "X.........#.......X",
+      "X.P...............X",
+      "X.....X.....X.....X",
+      "X.....X..#..X.....X",
+      "X.....X.....X.....X",
+      "X.........#.......X",
+      "X.................X",
+      "XXXXXXXXXXXXXXXXXXX"
+    ]
+  },
+  {
+    "Id": 4,
+    "Name": "The Wrong Comparison",
+    "Type": "Code",
+    "Description": "The login program compiles, but it behaves strangely... A developer used the wrong operator somewhere in the code. Find the line with the logic mistake and press Enter to flag it. Tip: = puts a value into a variable, == checks if two values are equal!",
+    "Code": [
+      "static void Main()",
+      "{",
+      "    int correctCode = 2026;",
+      "    int enteredCode = 2026;",
+      "",
+      "    if (enteredCode = correctCode)",
+      "    {",
+      "        Console.WriteLine(\"Access granted!\");",
+      "    }",
+      "    else",
+      "    {",
+      "        Console.WriteLine(\"Access denied!\");",
+      "    }",
+      "}"
+    ],
+    "BuggyLine": 5,
+    "Fix": "= assigns a value, == compares two values. The line should be: if (enteredCode == correctCode)"
+  },
+  {
+    "Id": 5,
+    "Name": "The Phishing Email",
+    "Type": "Dialogue",
+    "Character": "Anna",
+    "Description": "Anna from accounting received a suspicious email and is about to click a dangerous link. Answer her questions and guide her to safety. Remember the golden rules of phishing: check the real sender address, never share your password, and never click links in strange emails!",
+    "Dialogue": [
+      {
+        "Npc": "Hi! I got an email saying my account will be closed in 24 hours unless I verify my password. Should I click the link? I don't want to lose my account!",
+        "Options": [
+          {
+            "Text": "Don't click anything yet. First, let's check who the email is really from.",
+            "Reply": "Good idea... the sender is support@totally-safe-mail-bonus.biz. Wait, that is not our company's address, is it?",
+            "Correct": true
+          },
+          {
+            "Text": "Yes, click it quickly before your account gets closed!",
+            "Reply": "Hold on, it's asking for my password AND my card number. Why would IT support need my card?!",
+            "Correct": false
+          },
+          {
+            "Text": "Just delete your whole email account to be safe.",
+            "Reply": "I can't delete my account, all of my invoices are in there! There has to be a better way.",
+            "Correct": false
+          }
+        ]
+      },
+      {
+        "Npc": "You're right, the address looks fishy. But the email has our company logo and everything! It looks so official!",
+        "Options": [
+          {
+            "Text": "If it has the company logo, it must be real.",
+            "Reply": "Hmm, my nephew got fake 'bank' emails with perfect logos too and they were all scams...",
+            "Correct": false
+          },
+          {
+            "Text": "Click the link, but only a little bit.",
+            "Reply": "That is the worst advice I have ever heard. Please take this seriously!",
+            "Correct": false
+          },
+          {
+            "Text": "Logos are easy to copy. Always check the sender address and where the link really goes.",
+            "Reply": "I never thought about that. Okay, so how do I check where the link actually points?",
+            "Correct": true
+          }
+        ]
+      },
+      {
+        "Npc": "Okay, I'm convinced it's fake. So what do I do with this email? And what if they keep sending more?",
+        "Options": [
+          {
+            "Text": "Report it as phishing, delete it, and never share your password with anyone.",
+            "Reply": "Reported and deleted! And from now on I'll call IT directly whenever I'm unsure. Thank you so much!",
+            "Correct": true
+          },
+          {
+            "Text": "Reply to the scammers and tell them to stop bothering you.",
+            "Reply": "They wrote back saying I 'won a free iPhone'! These people are shameless!",
+            "Correct": false
+          },
+          {
+            "Text": "Forward it to all your colleagues so they can click it too.",
+            "Reply": "Why would I want my colleagues to click a dangerous link?! Think before you speak!",
+            "Correct": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 6,
+    "Name": "Firewall Maintenance",
+    "Type": "Movement",
+    "Description": "The server hall is overheating! Five firewall nodes (red #) are failing across the network. Navigate between the server racks, stand on each failing node and press F to fix it. The racks (X) block your path, so plan your route through the aisles carefully!",
+    "Grid": [
+      "XXXXXXXXXXXXXXXXXXX",
+      "X.P...............X",
+      "X.XXXXX.XXXXX.XXX.X",
+      "X.......#.........X",
+      "X.XXX.XXXXX.XXXXX.X",
+      "X.#...............X",
+      "X.XXXXX.XXXXX.XXX.X",
+      "X.............#...X",
+      "X.XXX.XXXXX.XXXXX.X",
+      "X................#X",
+      "X.XXXXX.XXXXX.XXX.X",
+      "X.....#...........X",
+      "XXXXXXXXXXXXXXXXXXX"
+    ]
+  },
+  {
+    "Id": 7,
+    "Name": "The Out Of Bounds Bug",
+    "Type": "Code",
+    "Description": "A senior developer left a sneaky bug behind. The program compiles fine, but at runtime it crashes with IndexOutOfRangeException! Find the line that causes the crash and press Enter to flag it. Tip: arrays start counting at 0, so the last valid index is Length - 1.",
+    "Code": [
+      "static void Main()",
+      "{",
+      "    int[] scores = { 98, 75, 100, 60 };",
+      "    int total = 0;",
+      "",
+      "    for (int i = 0; i <= scores.Length; i++)",
+      "    {",
+      "        total += scores[i];",
+      "    }",
+      "",
+      "    Console.WriteLine(\"Total: \" + total);",
+      "}"
+    ],
+    "BuggyLine": 5,
+    "Fix": "The loop runs one step too far. Use i < scores.Length instead of i <= scores.Length to stay inside the array."
+  },
+  {
+    "Id": 8,
+    "Name": "The Angry Client",
+    "Type": "Dialogue",
+    "Character": "Giga",
+    "Description": "The final challenge! Giga, an angry client, storms into your office. His internet has been down for two hours and he is NOT happy. Stay professional: listen carefully, stay calm, troubleshoot step by step and never argue with the client. Good luck, you've got this!",
+    "Dialogue": [
+      {
+        "Npc": "TWO HOURS! My internet has been dead for TWO HOURS! I have a presentation in twenty minutes! Fix it. NOW.",
+        "Options": [
+          {
+            "Text": "Calm down, it's probably your own fault anyway.",
+            "Reply": "MY fault?! I am this close to asking for your manager! Try that again and see what happens!",
+            "Correct": false
+          },
+          {
+            "Text": "Two hours is nothing. My internet was off for a week once.",
+            "Reply": "I don't care about YOUR internet! I care about MY presentation! Focus!",
+            "Correct": false
+          },
+          {
+            "Text": "I'm really sorry about this. Let's fix it together right now. What do the lights on your router look like?",
+            "Reply": "...Fine. There are lights on it. The internet one is red, I think. Is that bad? It's never red.",
+            "Correct": true
+          }
+        ]
+      },
+      {
+        "Npc": "The internet light is red. What does that even mean?",
+        "Options": [
+          {
+            "Text": "It means your router is angry. Try apologizing to it.",
+            "Reply": "Are you making fun of me?! I came here for help, not for jokes!",
+            "Correct": false
+          },
+          {
+            "Text": "A red light usually means the router lost its connection. Let's restart it and check the cable.",
+            "Reply": "Restart... okay, I pulled the plug and pushed the network cable back in. Do I just turn it on again?",
+            "Correct": true
+          },
+          {
+            "Text": "Red is the new green. It means everything is fine.",
+            "Reply": "If everything is fine, why can't I open ONE single slide?! Help me for real!",
+            "Correct": false
+          }
+        ]
+      },
+      {
+        "Npc": "Router restarted, cable pushed back in... the light is green now! Testing... IT WORKS! But wait, it's loading slowly. The presentation might still lag!",
+        "Options": [
+          {
+            "Text": "The router needs a minute to fully reconnect. If it's still slow I'll check your line and follow up right after your presentation.",
+            "Reply": "...Alright. Alright! It's loading faster now. You were actually useful. Thank you. I take back what I said about your manager.",
+            "Correct": true
+          },
+          {
+            "Text": "That's a router problem, not my problem. Good luck!",
+            "Reply": "Unbelievable! And they call THIS an IT department! Where is your supervisor?!",
+            "Correct": false
+          },
+          {
+            "Text": "Just do the presentation without slides, like in the old days.",
+            "Reply": "The slides ARE the presentation! Do you even listen to people?!",
+            "Correct": false
+          }
+        ]
+      }
+    ]
+  }
+]
